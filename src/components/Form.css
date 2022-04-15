@@ -1,0 +1,17 @@
+form {
+  display: flex;
+}
+
+button {
+  background: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: 0.3s ease-out;
+}
+
+button:hover {
+  color: white;
+  background: black;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}

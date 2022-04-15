@@ -1,0 +1,13 @@
+ul {
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+
+.todo {
+  display: flex;
+  width: 15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 1.5rem;
+}
