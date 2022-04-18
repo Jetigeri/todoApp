@@ -29,7 +29,6 @@ const Todo = ({
     const lastObj = todos.filter((item) => item.id !== todo.id);
     const firstObj = todos.filter((item) => item.id === todo.id);
     setTodos([...lastObj, ...firstObj]);
-    console.log(firstObj, "firstobj");
   };
   return (
     <div>

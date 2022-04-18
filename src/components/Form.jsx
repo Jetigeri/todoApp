@@ -25,7 +25,6 @@ const Form = ({
 
   useEffect(() => {
     filterHandler();
-    
   }, [todos, status]);
 
   const inputRef = useRef();
@@ -66,19 +65,19 @@ const Form = ({
   const filterHandler = (e) => {
     switch (status) {
       case "all":
-        setFilteredTodos([])
-        setFilteredTodos(todos.filter(todo => todo));
-        console.log(filteredTodos, "these are all todos")
+        setFilteredTodos([]);
+        setFilteredTodos(todos.filter((todo) => todo));
+
         break;
-        case "completed":
-        setFilteredTodos([])
+      case "completed":
+        setFilteredTodos([]);
         setFilteredTodos(todos.filter((item) => item.completed === true));
-        console.log(filteredTodos, "these are completed todos")
+
         break;
-        case "uncompleted":
-        setFilteredTodos([])
+      case "uncompleted":
+        setFilteredTodos([]);
         setFilteredTodos(todos.filter((item) => item.completed === false));
-        console.log(filteredTodos, "these are uncompleted todos")
+
         break;
     }
   };
@@ -94,11 +93,7 @@ const Form = ({
           placeholder="enter a todo"
         />
         <button type="submit">{isEditing ? "modify" : "add"}</button>
-        <select
-          name="todos"
-          id=""
-          onChange={statusHandler}
-        >
+        <select name="todos" id="" onChange={statusHandler}>
           <option value="all">all</option>
           <option value="completed">completed</option>
           <option value="uncompleted">uncompleted</option>

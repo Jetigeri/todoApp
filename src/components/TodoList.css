@@ -11,3 +11,9 @@ ul {
   align-items: center;
   height: 1.5rem;
 }
+
+.listContainer {
+  height: 40%;
+  width: auto;
+  overflow: auto;
+}

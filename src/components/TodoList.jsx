@@ -7,7 +7,7 @@ const TodoList = ({ filteredTodos, todos, setTodos, setIsEditing, isEditing, set
    
 
   return (
-    <div>
+    <div className="listContainer">
       <ul>
         {filteredTodos.map((todo, i) => (
           <Todo key={todo.id}
