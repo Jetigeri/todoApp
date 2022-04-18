@@ -66,15 +66,18 @@ const Form = ({
   const filterHandler = (e) => {
     switch (status) {
       case "all":
+        setFilteredTodos([])
         setFilteredTodos(todos.filter(todo => todo));
         console.log(filteredTodos, "these are all todos")
         break;
-      case "completed":
-        setFilteredTodos(todos.filter((item) => item.completed));
+        case "completed":
+        setFilteredTodos([])
+        setFilteredTodos(todos.filter((item) => item.completed === true));
         console.log(filteredTodos, "these are completed todos")
         break;
-      case "uncompleted":
-        setFilteredTodos(todos.filter((item) => !item.completed));
+        case "uncompleted":
+        setFilteredTodos([])
+        setFilteredTodos(todos.filter((item) => item.completed === false));
         console.log(filteredTodos, "these are uncompleted todos")
         break;
     }

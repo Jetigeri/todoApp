@@ -21,23 +21,22 @@ const Todo = ({
     setIsEditing(!isEditing);
     setIsEdited(todo.id);
     setInputText(todo.text);
-    setCompleted(false)
-    
+    setCompleted(false);
   };
 
   const completeHandler = () => {
-    setCompleted(!completed);
-    todo.completed = !todo.completed
-    const lastObj = todos.filter(item => item.id !== todo.id)
-    const firstObj = todos.filter(item => item.id === todo.id)
-    setTodos([...lastObj, ...firstObj])
-
+    todo.completed = !todo.completed;
+    const lastObj = todos.filter((item) => item.id !== todo.id);
+    const firstObj = todos.filter((item) => item.id === todo.id);
+    setTodos([...lastObj, ...firstObj]);
+    console.log(firstObj, "firstobj");
   };
   return (
-    <div className={completed ? "completed" : ""}>
+    <div>
       <li className="todo">
-        <p onClick={completeHandler} 
-        
+        <p
+          onClick={completeHandler}
+          className={todo.completed ? "completed" : ""}
         >
           {todo.text}
         </p>
